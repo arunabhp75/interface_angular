@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  showForm:boolean;
 
-  ngOnInit() {
+  toggleAptDisplay(){
+    this.showForm = !this.showForm;
   }
 
+  constructor() { 
+    this.showForm = true;
+  }
+  ngOnInit() {
+  }
 }

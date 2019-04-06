@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { without } from 'lodash';
 
 library.add(faTimes);
+library.add(faPlus);
 
 @Component({
   selector: 'app-root',
