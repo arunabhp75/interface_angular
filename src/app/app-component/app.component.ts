@@ -16,6 +16,13 @@ export class AppComponent implements OnInit{
   title = 'Angular App';
   theList: object[];
 
+  deleteApt(theApt: object){
+    this.theList = without(this.theList, theApt);
+  }
+
+  addApt(theApt: object){
+    this.theList.unshift(theApt);
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -26,8 +33,5 @@ export class AppComponent implements OnInit{
     })
   }
 
-  deleteApt(theApt: object){
-    this.theList = without(this.theList, theApt);
-  }
 
 }
