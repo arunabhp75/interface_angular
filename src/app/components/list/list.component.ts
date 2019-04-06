@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
+//import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-list',
@@ -6,5 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ListComponent {
   @Input() aptList;
+  @Output() deleteEvt = new EventEmitter();
+
+  handleDelete(theApt: object){
+    //console.log(theApt);
+    this.deleteEvt.emit(theApt);
+  }
   
 }
